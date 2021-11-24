@@ -20,7 +20,8 @@ public class Arrays_Reverse {
      * @param a1 AN ARRAY A OF INTEGERS OF SIZE N
      * @return REVERSE OF ARRAY
      * 
-     *         TC : SC :
+     * TC : O(N/2)
+     * SC : O(N)
      */
     private ArrayList<Integer> reverse(final List<Integer> A) {
         ArrayList<Integer> result = new ArrayList<>(A.size());
