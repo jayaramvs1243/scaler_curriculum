@@ -9,8 +9,12 @@ public class Arrays_Rotation {
     public static void main(String[] args) {
         Arrays_Rotation object = new Arrays_Rotation();
 
-        List<Integer> A = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+        List<Integer> A = new ArrayList<>(Arrays.asList(1, 1, 1, 1, 1));
         Integer B = 3;
+
+        if (B > A.size()) {
+            B = B / A.size();
+        }
 
         /* REVERSE THE ENTIRE ARRAY */
         object.reverse(A, 0, A.size() - 1);
@@ -33,7 +37,7 @@ public class Arrays_Rotation {
      * @return ARRAY WITH THE REVERSED SUBARRAY
      * 
      * TC : O(N/2)
-     * SC : O(N)
+     * SC : O(1)
      */
     private List<Integer> reverse(List<Integer> A, Integer start, Integer end) {
         Integer temp = 0;
