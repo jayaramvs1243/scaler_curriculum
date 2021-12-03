@@ -70,7 +70,7 @@ public class Strings_Reverse {
             inputArray[input.length() - 1 - i] = temp;
         }
 
-        return new String(inputArray).toLowerCase();
+        return new String(inputArray);
     }
 
 }
