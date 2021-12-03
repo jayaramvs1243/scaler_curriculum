@@ -6,10 +6,11 @@ public class Strings_Reverse {
 
         Strings_Reverse object = new Strings_Reverse();
 
-        String input = "MAMA";
+        String input = "Scaler";
         System.out.println(object.reverse1(input));
         System.out.println(object.reverse2(input));
         System.out.println(object.reverse3(input));
+        System.out.println(object.reverse4(input, 0, input.length() - 1));
 
     }
 
@@ -68,6 +69,21 @@ public class Strings_Reverse {
             temp = inputArray[i];
             inputArray[i] = inputArray[input.length() - 1 - i];
             inputArray[input.length() - 1 - i] = temp;
+        }
+
+        return new String(inputArray);
+    }
+
+    private String reverse4(String input, Integer start, Integer end) {
+        char[] inputArray = input.toCharArray();
+
+        char temp;
+        Integer mid = ((end - start) / 2) + start;
+
+        for (int i = start; i <= mid; i++) {
+            temp = inputArray[i];
+            inputArray[i] = inputArray[end - i];
+            inputArray[end - i] = temp;
         }
 
         return new String(inputArray);
